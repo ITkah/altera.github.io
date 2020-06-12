@@ -550,9 +550,6 @@ nav {
   @media (max-width: 1400px) {
     .constant-state-video-container {
       grid-template-columns: 1fr; } }
-  @media (max-width: 990px) {
-    .constant-state-video-container {
-      display: none; } }
 
 .constant-state-video-wrap {
   display: grid;
@@ -563,6 +560,9 @@ nav {
     .constant-state-video-wrap {
       grid-gap: 20px;
       margin-bottom: 20px; } }
+  @media (max-width: 768px) {
+    .constant-state-video-wrap {
+      grid-template-columns: 1fr; } }
 
 .constant-state-video-box .constante-video-box {
   margin-bottom: 10px; }
@@ -738,7 +738,8 @@ nav {
       margin-bottom: 25px; } }
   @media (max-width: 990px) {
     .hide-advertising {
-      margin-bottom: 15px; } }
+      margin-bottom: 15px;
+      grid-gap: 10px; } }
 
 .constant-slider .container {
   padding: 40px 20px; }

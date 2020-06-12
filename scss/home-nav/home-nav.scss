@@ -1,0 +1,210 @@
+.home-nav-container {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-gap: 30px;
+    padding: 20px 0;
+    @media (max-width: 1400px) {
+        grid-template-columns: 1fr;
+    }
+    .advertising-banner-wrap {
+        @media (max-width: 1400px) {
+            display: none;
+        }
+    }
+}
+
+.home-nav-container-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 25px;
+    @media (max-width: 1600px) {
+        grid-gap: 15px;
+    }
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto
+    }
+    @media (max-width: 360px) {
+        grid-template-columns: 1fr;
+    }
+    .home-nav-box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 25px 20px;
+        cursor: pointer;
+        border-radius: 10px;
+        height: 180px;
+        @media (max-width: 1400px) {
+            height: 220px;
+        }
+        @media (max-width: 990px) {
+            height: 145px;
+        }
+        @media (max-width: 576px) {
+            height: 135px;
+        }
+        @media (max-width: 360px) {
+            height: 160px;
+        }
+        .home-nav-title {
+            display: block;
+            color: #FFF;
+            font: bold 1.4rem 'Roboto', sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            @media (max-width: 1600px) {
+                font: bold 1.2rem 'Roboto', sans-serif;
+            }
+            @media (max-width: 990px) {
+                font: bold 1rem 'Roboto', sans-serif;
+            }
+            @media (max-width: 576px) {
+                font: bold .95rem 'Roboto', sans-serif;
+            }
+        }
+        .home-nav-info {
+            display: block;
+            color: #FFF;
+            font: 400 .75rem 'Roboto', sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+    .blocked {
+        position: relative;
+        &:hover {
+            .blocked-info-box {
+                opacity: 1;
+            } 
+        }
+        .blocked-info-box {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(11,31,94,.7);
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            z-index: 99;
+            opacity: 0;
+            transition: .3s;
+            height: 100%;
+            .blocked-title {
+                font: 400 1rem 'Roboto', sans-serif;
+                color: #fff;
+                position: relative;
+                z-index: 9;
+                text-align: center;
+                margin-bottom: 40px;
+                @media (max-width: 990px) {
+                    margin-bottom: 20px;
+                    font-size: .8rem;
+                }
+            }
+            .blocked-info {
+                font: 400 1rem 'Roboto', sans-serif;
+                color: #fff;
+                position: relative;
+                z-index: 9;
+                text-align: center;
+                margin-bottom: 30px;
+                @media (max-width: 990px) {
+                    margin-bottom: 20px;
+                    font-size: .8rem;
+                }
+            }
+            .call-regist-modal {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;
+                border: 1px solid #fff;
+                font: 600 1rem 'Roboto', sans-serif;
+            }
+        }
+        .home-nav-title {
+            position: relative;
+            right: -5px;
+            @media (max-width: 576px) {
+                right: -10px;
+            }
+            &::before {
+                content: url(../img/home-nav/blocked.svg);
+                position: absolute;
+                left: -40px;
+                top: -7px;
+                @media (max-width: 576px) {
+                   top: -10px;
+                }
+            }
+        }
+    }
+    .blocked:first-child {
+        .blocked-info-box {
+            @media (max-width: 990px) {
+                opacity: 1;
+            }
+        } 
+    }
+    .social {
+        background: url(../img/home-nav/social.png) no-repeat center center;
+        background-size: cover;
+    }
+    .state {
+        background: url(../img/home-nav/state.png) no-repeat center center;
+        background-size: cover;
+    }
+    .book {
+        background: url(../img/home-nav/book.png) no-repeat center center;
+        background-size: cover;
+    }
+    .film {
+        background: url(../img/home-nav/film.png) no-repeat center center;
+        background-size: cover;
+    }
+    .program {
+        background: url(../img/home-nav/program.png) no-repeat center center;
+        background-size: cover;
+    }
+    .learn {
+        background: url(../img/home-nav/learn.png) no-repeat center center;
+        background-size: cover;
+    }
+    .services {
+        background: url(../img/home-nav/services.png) no-repeat center center;
+        background-size: cover;
+    }
+    .tur {
+        background: url(../img/home-nav/tur.png) no-repeat center center;
+        background-size: cover;
+    }
+    .orend {
+        background: url(../img/home-nav/orend.png) no-repeat center center;
+        background-size: cover;
+    }
+    .sale {
+        background: url(../img/home-nav/sale.png) no-repeat center center;
+        background-size: cover;
+    }
+    .strahovka {
+        background: url(../img/home-nav/strahovka.png) no-repeat center center;
+        background-size: cover;
+    }
+    .vebinar {
+        background: url(../img/home-nav/vebinar.png) no-repeat center center;
+        background-size: cover;
+    }
+}

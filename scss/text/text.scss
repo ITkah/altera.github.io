@@ -1,0 +1,15 @@
+.title-sm {
+    color: #0B1F5E;
+    text-transform: uppercase;
+    font: 600 1.55rem 'Roboto', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @media (max-width: 1400px) {
+        font: 600 1.35rem 'Roboto', sans-serif;
+    }
+    @media (max-width: 990px) {
+        font: 600 1.2rem 'Roboto', sans-serif;
+        margin-bottom: 10px;
+    }
+}

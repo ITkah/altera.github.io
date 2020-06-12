@@ -1,0 +1,166 @@
+.main-screen {
+    background: url(../img/main-screen/main-screen.png) no-repeat center center;
+    background-size: cover;
+    height: 580px;
+    @media (max-width: 1280px) {
+        height: 500px;
+    }
+    @media (max-width: 990px) {
+        height: auto;
+    }
+    .container {
+        height: 100%;
+        @media (max-width: 990px) {
+            padding: 20px 0 40px 0;
+        }
+        @media (max-width: 576px) {
+            padding:20px 0;
+        }
+    }
+}
+
+.main-screen-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .main-screen-title {
+        color: #0B1F5E;
+        font: 600 3.6rem 'Roboto', sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        @media (max-width: 1280px) {
+            font: 600 3rem 'Roboto', sans-serif; 
+        }
+        @media (max-width: 576px) {
+            font: 600 1.5rem 'Roboto', sans-serif;
+            margin-bottom: 5px;
+        }
+    }
+    .main-screen-text {
+        color: #0B1F5E;
+        font: 400 2.35rem 'Roboto', sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        @media (max-width: 1280px) {
+            font: 400 2rem 'Roboto', sans-serif; 
+            margin-bottom: 20px;
+        }
+        @media (max-width: 576px) {
+            font: 400 1rem 'Roboto', sans-serif;
+        }
+    }
+    img {
+        margin-bottom: 60px;
+        @media (max-width: 1280px) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 990px) {
+            height: 100px;
+        }
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+    .main-screen-panel {
+        display: flex;
+        align-items: center;
+        @media (max-width: 360px) {
+            flex-direction: column;
+            justify-content: center;
+        }
+        .btn-screen {
+            padding: 10px 30px;
+            width: 200px;
+            text-align: center;
+            background: #fff;
+            font: 600 1rem 'Roboto', sans-serif;
+            border: 3px solid #fff;
+            border-radius: 40px;
+            text-transform: uppercase;
+            margin: 0 15px;
+            display: block;
+            position: relative;
+            @media (max-width: 990px) {
+                padding: 8px 25px;
+                width: 160px;
+            }
+            @media (max-width: 576px) {
+                width: auto;
+                margin: 0 5px;
+                padding: 10px 35px;
+                font: 600 .87rem 'Roboto', sans-serif;
+            }
+            @media (max-width: 390px) {
+                font: 600 .8rem 'Roboto', sans-serif;
+                padding: 8px 30px;
+            }
+            @media (max-width: 360px) {
+                width: 100%;
+                margin: 5px;
+            }
+        }
+        .inside {
+            color: #CD181F;
+            border: 3px solid #CD181F;
+            transform: matrix(0.98, 0.19, -0.19, 0.98, 0, 0);
+            @media (max-width: 576px) {
+                transform: none;
+            }
+            &::after {
+                content: url(../img/icon/helm.png);
+                position: absolute;
+                right: 10px;
+                top: 4px;
+                @media (max-width: 576px) {
+                    top: 3px;
+                    right: 5px;
+                }
+                @media (max-width: 390px) {
+                    top: 1px;
+                    right: 2px;
+                }
+            }
+        }
+        .regist {
+            color: #0B1F5E;
+            border: 3px solid #0B1F5E;
+            transform: matrix(0.98, -0.19, 0.19, 0.98, 0, 0);
+            @media (max-width: 576px) {
+                transform: none;
+            }
+            &::after {
+                content: url(../img/icon/anchor.png);
+                position: absolute;
+                left: 10px;
+                top: 6px;
+                transform: rotate(9deg);
+                @media (max-width: 576px) {
+                    top: 4px;
+                    left: 5px;
+                }
+                @media (max-width: 390px) {
+                    top: 1px;
+                    left: 2px;
+                }
+            }
+        }
+        .call-question {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            height: 33px;
+            width: 33px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            font: 600 1.125rem 'Roboto', sans-serif;
+            position: relative;
+            bottom: -25px;
+            @media (max-width: 576px) {
+                display: none;
+            }
+        }
+    }
+}
