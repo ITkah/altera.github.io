@@ -2,7 +2,7 @@ footer {
     background: #0B1F5E;
     .container {
         max-width: 1280px;
-        padding: 35px 0;
+        padding: 30px 0;
         @media (max-width: 700px) {
             padding: 20px 0;
         }
@@ -38,38 +38,38 @@ footer {
     display: flex;
     flex-direction: column;
     .footer-title {
-        font: 600 1.25rem 'Roboto', sans-serif;
+        font: bold 1.25rem 'Raleway', sans-serif;
         color: #fff;
         margin-bottom: 15px;
         text-transform: uppercase;
         @media (max-width: 1280px) {
-            font: 600 1.125rem 'Roboto', sans-serif;
+            font: 600 1.125rem 'Raleway', sans-serif;
             margin-bottom: 10px;
         }
         @media (max-width: 700px) {
-            font: 600 1rem 'Roboto', sans-serif;
+            font: 600 1rem 'Raleway', sans-serif;
         }
     }
     .footer-text {
-        font: 100 1.1rem/22px 'Roboto', sans-serif;
+        font: 300 1.1rem/21px 'Raleway', sans-serif;
         color: #fff;
         @media (max-width: 1280px) {
-            font: 100 1rem 'Roboto', sans-serif;
+            font: 300 1rem 'Raleway', sans-serif;
         }
         @media (max-width: 990px) {
-            font: 100 1rem 'Roboto', sans-serif;
+            font: 300 1rem 'Raleway', sans-serif;
         }
         @media (max-width: 700px) {
-            font: 100 .95rem 'Roboto', sans-serif;
+            font: 300 .95rem 'Raleway', sans-serif;
         }
         strong {
-            font: 600 1.25rem 'Roboto', sans-serif;
+            font: 600 1.25rem 'Raleway', sans-serif;
             text-transform: uppercase;
             @media (max-width: 1280px) {
-                font: 600 1.125rem 'Roboto', sans-serif;
+                font: 600 1.125rem 'Raleway', sans-serif;
             }
             @media (max-width: 700px) {
-                font: 600 1rem 'Roboto', sans-serif;
+                font: 600 1rem 'Raleway', sans-serif;
             }
         }
     }
@@ -84,7 +84,7 @@ footer {
         align-items: flex-start;
     }
     img {
-        height: 180px;
+        height: 200px;
         max-width: 100%;
         object-fit: contain;
         margin-bottom: 20px;
@@ -114,16 +114,16 @@ footer {
 }
 
 .author {
-    font: 100 .95rem 'Roboto', sans-serif;
+    font: 300 .9rem 'Raleway', sans-serif;
     color: #fff;
     text-decoration: underline;
     white-space: nowrap;
     @media (max-width: 1280px) {
-        font: 100 .8rem 'Roboto', sans-serif;
+        font: 300 .8rem 'Raleway', sans-serif;
     }
     @media (max-width: 700px) {
         text-align: center;
-        font: 100 .95rem 'Roboto', sans-serif;
+        font: 300 .9rem 'Raleway', sans-serif;
     }
 }
 
@@ -165,7 +165,7 @@ footer {
             margin-bottom: 10px;
             a {
                 text-transform: uppercase;
-                font: 100 .95rem 'Roboto', sans-serif;
+                font: 300 .87rem 'Raleway', sans-serif;
                 color: #fff;
                 &:hover {
                     text-decoration: underline;

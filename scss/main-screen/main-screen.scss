@@ -1,12 +1,29 @@
 .main-screen {
-    background: url(../img/main-screen/main-screen.png) no-repeat center center;
-    background-size: cover;
+    background: url(../img/main-screen/main-screen.png) no-repeat center center/cover;
     height: 580px;
+    position: relative;
+    &::before {
+        content: '';
+        height: 55%;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        position: absolute;
+        background: rgba(255,255,255,.5);
+        display: block;
+        clip-path: polygon(50% 75%, 100% 30%, 100% 100%, 0 100%, 0% 30%);
+        @media (max-width: 1400px) {
+            height: 65%;
+        }
+        @media (max-width: 990px) {
+            display: none;
+        }
+    }
     @media (max-width: 1280px) {
         height: 500px;
     }
     @media (max-width: 990px) {
-        height: auto;
+        height: 150px;
     }
     .container {
         height: 100%;
@@ -19,6 +36,12 @@
     }
 }
 
+.inside-main-screen {
+    &::before {
+        display: none;
+    }
+}
+
 .main-screen-container {
     display: flex;
     flex-direction: column;
@@ -27,28 +50,28 @@
     height: 100%;
     .main-screen-title {
         color: #0B1F5E;
-        font: 600 3.6rem 'Roboto', sans-serif;
+        font: 600 3.6rem 'Raleway', sans-serif;
         text-transform: uppercase;
         margin-bottom: 10px;
         @media (max-width: 1280px) {
-            font: 600 3rem 'Roboto', sans-serif; 
+            font: 600 3rem 'Raleway', sans-serif; 
         }
         @media (max-width: 576px) {
-            font: 600 1.5rem 'Roboto', sans-serif;
+            font: 600 1.5rem 'Raleway', sans-serif;
             margin-bottom: 5px;
         }
     }
     .main-screen-text {
         color: #0B1F5E;
-        font: 400 2.35rem 'Roboto', sans-serif;
+        font: 400 2.35rem 'Raleway', sans-serif;
         text-transform: uppercase;
         margin-bottom: 50px;
         @media (max-width: 1280px) {
-            font: 400 2rem 'Roboto', sans-serif; 
+            font: 400 2rem 'Raleway', sans-serif; 
             margin-bottom: 20px;
         }
         @media (max-width: 576px) {
-            font: 400 1rem 'Roboto', sans-serif;
+            font: 400 1rem 'Raleway', sans-serif;
         }
     }
     img {
@@ -75,7 +98,7 @@
             width: 200px;
             text-align: center;
             background: #fff;
-            font: 600 1rem 'Roboto', sans-serif;
+            font: 600 1rem 'Raleway', sans-serif;
             border: 3px solid #fff;
             border-radius: 40px;
             text-transform: uppercase;
@@ -90,10 +113,10 @@
                 width: auto;
                 margin: 0 5px;
                 padding: 10px 35px;
-                font: 600 .87rem 'Roboto', sans-serif;
+                font: 600 .87rem 'Raleway', sans-serif;
             }
             @media (max-width: 390px) {
-                font: 600 .8rem 'Roboto', sans-serif;
+                font: 600 .8rem 'Raleway', sans-serif;
                 padding: 8px 30px;
             }
             @media (max-width: 360px) {
@@ -109,11 +132,13 @@
                 transform: none;
             }
             &::after {
-                content: url(../img/icon/helm.png);
+                content: url(../img/icon/helm.svg);
                 position: absolute;
-                right: 10px;
-                top: 4px;
-                @media (max-width: 576px) {
+                height: 28px;
+                width: 28px;
+                right: 30px;
+                top: 6px;
+                @media (max-width: 990px) {
                     top: 3px;
                     right: 5px;
                 }
@@ -131,12 +156,13 @@
                 transform: none;
             }
             &::after {
-                content: url(../img/icon/anchor.png);
+                content: url(../img/icon/anchor.svg);
                 position: absolute;
-                left: 10px;
+                left: 35px;
+                height: 28px;
+                width: 28px;
                 top: 6px;
-                transform: rotate(9deg);
-                @media (max-width: 576px) {
+                @media (max-width: 990px) {
                     top: 4px;
                     left: 5px;
                 }
@@ -151,16 +177,28 @@
             align-items: center;
             justify-content: center;
             color: #fff;
-            height: 33px;
-            width: 33px;
+            height: 32px;
+            width: 32px;
             border-radius: 50%;
-            border: 2px solid #fff;
-            font: 600 1.125rem 'Roboto', sans-serif;
+            border: 3px solid #fff;
+            font: 600 1.5rem 'Raleway', sans-serif;
             position: relative;
             bottom: -25px;
+            transform: rotate(-7deg);
             @media (max-width: 576px) {
                 display: none;
             }
         }
+    }
+}
+
+
+
+/*Стили для зарегестрированного юзера*/
+.inside-main {
+    justify-content: flex-start;
+    padding-top: 50px;
+    @media (max-width: 990px) {
+        padding-top: 15px;
     }
 }

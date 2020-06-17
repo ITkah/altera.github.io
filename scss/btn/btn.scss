@@ -3,14 +3,14 @@
     background: #0C9FCE;
     border-radius: 5px;
     color: #fff;
-    font: 500 1.2rem 'Roboto', sans-serif;
+    font: 500 1.2rem 'Raleway', sans-serif;
     transition: .3s;
     @media (max-width: 1024px) {
         padding: 7px 20px;
-        font: 500 1.125rem 'Roboto', sans-serif;
+        font: 500 1.125rem 'Raleway', sans-serif;
     }
     @media (max-width: 990px) {
-        font: 500 1rem 'Roboto', sans-serif;
+        font: 500 1rem 'Raleway', sans-serif;
     }
     &:hover {
         background: rgb(0, 184, 245);
