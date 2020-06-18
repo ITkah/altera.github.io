@@ -70,6 +70,7 @@ header {
         position: absolute;
         top: 25px;
         left: -10px;
+        z-index: 999;
         @media (max-width: 990px) {
             left: -15px;
         }
