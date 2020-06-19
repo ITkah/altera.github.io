@@ -558,7 +558,12 @@ nav {
       border: 10px solid transparent;
       border-top: 10px solid #fff; }
   .inside-header-container .hide-lang {
-    left: -50px; }
+    left: -13px;
+    width: 70px; }
+    .inside-header-container .hide-lang li {
+      width: 100%; }
+    .inside-header-container .hide-lang a {
+      display: block; }
 
 .nav-hide-panel {
   display: none; }
@@ -2017,8 +2022,8 @@ textarea {
           left: 8px;
           top: 13px;
           background-size: 20px 20px;
-          height: 20px;
-          width: 20px; } }
+          height: 24px;
+          width: 25px; } }
   .regist-inside .regist-inside-form .regist-btn {
     border: none;
     background: #0B1F5E; }
