@@ -1,7 +1,23 @@
 $(document).ready(function() {
 
+  $("nav ul li").each(function() {
+    this_li = $(this);
+    if ($(this_li).find("ul").length > 0) {
+      $(this_li).append('<div class="arrow-mob"></div>')
+    }
+  });
+
+  $(".arrow-mob").on("click", function(){
+    $(this).toggleClass("active-arrow");
+    $(this).siblings(".sub-menu").slideToggle(100);
+  });
+
   $(".call-lang").on("click", function(){
     $(".hide-lang").fadeToggle(100);
+  });
+
+  $(".call-lang-2").on("click", function(){
+    $(".hide-lang-2").fadeToggle(100);
   });
 
   $(".show-password").on("click", function() {
@@ -11,6 +27,14 @@ $(document).ready(function() {
 
   $(".call-search").on("click", function(){
     $(".hide-search").fadeToggle(200);
+  });
+
+  $(".call-menu").on("click", function(){
+    $("nav").toggleClass("active-menu");
+  });
+
+  $(".close-menu").on("click", function(){
+    $("nav").removeClass("active-menu");
   });
 
 
