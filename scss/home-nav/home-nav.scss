@@ -15,22 +15,41 @@
 
 .home-nav-container-wrap {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4,286px);
+    grid-template-rows: repeat(3,286px);
     grid-gap: 25px;
-    @media (max-width: 1600px) {
+    margin: 0 auto;
+    @media (max-width: 1800px) {
+        grid-template-columns: repeat(4,260px);
+        grid-template-rows: repeat(3,260px);
+    }
+    @media (max-width: 1650px) {
+        grid-template-columns: repeat(4,240px);
+        grid-template-rows: repeat(3,240px);
+    }
+    @media (max-width: 1500px) {
+        grid-template-columns: repeat(4,220px);
+        grid-template-rows: repeat(3,220px);
+    }
+    @media (max-width: 990px) {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,235px);
         grid-gap: 15px;
     }
     @media (max-width: 700px) {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,200fr);
     }
     @media (max-width: 576px) {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+    }
+    @media (max-width: 420px) {
+        grid-template-rows: auto;
     }
     @media (max-width: 360px) {
         grid-template-columns: 1fr;
+        width: 100%;
     }
     .home-nav-box {
         display: flex;
@@ -41,17 +60,11 @@
         border-radius: 10px;
         height: 100%;
         box-sizing: border-box;
-        @media (max-width: 1400px) {
-            height: 320px;
+        @media (max-width: 700px) {
+            height: 200px;
         }
-        @media (max-width: 1280px) {
-            height: 290px;
-        }
-        @media (max-width: 1024px) {
-            height: 230px;
-        }
-        @media (max-width: 990px) {
-            height: 175px;
+        @media (max-width: 576px) {
+            height: 200px;
         }
         @media (max-width: 420px) {
             height: 190px;
@@ -60,6 +73,9 @@
             height: 170px;
         }
         @media (max-width: 360px) {
+            height: 220px;
+        }
+        @media (max-width: 320px) {
             height: 300px;
         }
         .home-nav-title {
