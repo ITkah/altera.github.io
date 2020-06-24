@@ -7,6 +7,10 @@ $(document).ready(function() {
     }
   });
 
+  $(".post-favorite-box").on("click", function(){
+    $(this).toggleClass("post-favorite-click");
+  });
+
   $(".arrow-mob").on("click", function(){
     $(this).toggleClass("active-arrow");
     $(this).siblings(".sub-menu").slideToggle(100);

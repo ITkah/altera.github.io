@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
     <body>
 
@@ -67,16 +68,18 @@
                 </div>
             </header>
             <main>
-                <section class="main-screen inside-main-screen padding">
-                    <img src="img/main-screen/main-screen.png" class="main-img" alt="main">
+                <section class="main-screen inside-main-screen template social padding">
+                    <img src="img/main-screen/social.png" class="main-img" alt="main">
                     <div class="container">
                         <div class="main-screen-container inside-main">
-                            <h2 class="main-screen-title">
-                                Актуальная база
-                            </h2>
-                            <p class="main-screen-text">
-                                инфопродуктов о яхтинге
-                            </p>
+                            <div class="advanture-reklama-wrap">
+                                <div class="advanture-reklama-box">
+                                    <img src="img/reklama/reklama-2.png" alt="reklama">
+                                </div>
+                                <div class="advanture-reklama-box">
+                                    <img src="img/reklama/reklama-2.png" alt="reklama">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -324,58 +327,93 @@
                                     <img src="img/reklama/reklama.png" alt="reklama">
                                 </div>
                             </div>
-                            <div class="home-nav-container-wrap">
-                                <div class="home-nav-box social ">
-                                    <p class="home-nav-title">Соцети</p>
-                                    
-                                </div>
-                                <div class="home-nav-box state ">
-                                    <p class="home-nav-title">Статьи</p>
-                                    
-                                </div>
-                                <div class="home-nav-box book ">
-                                    <p class="home-nav-title">Книги</p>
-                                    
-                                </div>
-                                <div class="home-nav-box film ">
-                                    <p class="home-nav-title">Фильм</p>
-                                    
-                                </div>
-                                <div class="home-nav-box program ">
-                                    <p class="home-nav-title">ПО</p>
-                                    <p class="home-nav-info">используемое яхтсменами</p>
-                                    
-                                </div>
-                                <div class="home-nav-box learn ">
-                                    <p class="home-nav-title">Обучение</p>
-                                    <p class="home-nav-info">яхтингу</p>
-                                    
-                                </div>
-                                <div class="home-nav-box services ">
-                                    <p class="home-nav-title">Услуги</p>
-                                    <p class="home-nav-info">Персонал</p>
-                                    
-                                </div>
-                                <div class="home-nav-box tur ">
-                                    <p class="home-nav-title">Туризм</p>
-                                    <p class="home-nav-info">АГЕНтСТВА / агенты</p>
-                                    
-                                </div>
-                                <div class="home-nav-box orend ">
-                                    <p class="home-nav-title">Аренда</p>
-                                    
-                                </div>
-                                <div class="home-nav-box sale ">
-                                    <p class="home-nav-title">Продажи</p>
-                                    
-                                </div>
-                                <div class="home-nav-box strahovka ">
-                                    <p class="home-nav-title">Страхование</p>
-                                    
-                                </div>
-                                <div class="home-nav-box vebinar ">
-                                    <p class="home-nav-title">Вебинары</p>
-                                    
+                            <div class="post-template">
+                                <div class="post-tempate-container">
+                                    <div class="post-template-panel">
+                                        <div class="post-template-info">
+                                            <div class="post-template-title-wrap">
+                                                <h2 class="template-title-xl">Видеоканалы</h2>
+                                                <p class="template-title-sm">Серии от авторов</p>
+                                            </div>
+                                            <div class="post-tempate-sort-wrap">
+                                                <a href="#" class="top-link">ТОП 10</a>
+                                                <div class="select-sort-box">
+                                                    <select name="sort">
+                                                        <option value="По цене">Сортировать</option>
+                                                        <option value="По цене">По цене</option>
+                                                        <option value="По цене">По цене</option>
+                                                        <option value="По цене">По цене</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-tempate-filter">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="post-template-main">
+                                        <div class="post-template-post-wrap">
+                                            <div class="post-template-box">
+                                                <div class="post-info-wrap">
+                                                    <div class="post-info-box">
+                                                        <p class="type-post">Канал</p>
+                                                        <p class="date-post">11 апреля 2020</p>
+                                                    </div>
+                                                    <div class="post-info-box">
+                                                        <div class="box-lang">
+                                                            <a href="#" class="active-lang">ENG</a>
+                                                            <a href="#">RU</a>
+                                                        </div>
+                                                        <p class="top-post">ТОП 10</p>
+                                                    </div>
+                                                </div>
+                                                <div class="post-content-wrap">
+                                                    <div class="post-content-img">
+                                                        <video controls poster="">
+                                                            <source src="video.mp4" type="video/mp4"><!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
+                                                        </video>
+                                                        <a href="#" class="btn-chanel">Открыть YouTube канал</a>
+                                                    </div>
+                                                    <div class="post-content-decription">
+                                                        <div class="post-name-box">
+                                                            <p class="chanel">видеоканал</p>
+                                                            <div class="post-user">
+                                                                <img src="img/icon/user.png" alt="user">
+                                                                <a href="#" class="name">Cupiditas Sailing</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post-wrap">
+                                                            <h3 class="post-title">
+                                                                Всем привет! Мы Илья и Аня!
+                                                            </h3>
+                                                            <p class="post-text">
+                                                                Что можно сделать пока еще не укачало? Как питаться на яхте? Что купить в супермаркете? Как защититься от солнца? Что можно сделать пока еще не укачало? Как питаться на яхте? Что купить в супермаркете? Как защититься от солнца? Что можно сделать пока еще не укачало? Как питаться на яхте? Что купить в супермаркете? Как защититься от ... солнца? Что можно сделать пока еще не укачало? Как питаться на яхте? Что купить в супермаркете? Как защититься от солнца? Как питаться на яхте? Что купить в супермаркете? Как защититься от солнца? Что можно сделать пока еще не укачало? Как питаться на яхте? Что купить в супермаркете? Как защититься от солнца? Что купить в супермаркете? Как защититься от солнца? Что можно сделать пока еще не укачало? Как питаться на яхте? Что купить в супермаркете? Как защититься от солнца? Что можно сделать пока еще не укачало? Как питаться на яхте? Что купить в супермаркете? Как защититься от солнца? Как питаться на яхте? Что купить в супермаркете? ...
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-bottom-panel">
+                                                    <div class="coment-box">
+                                                        <p>200 коментариев</p>
+                                                    </div>
+                                                    <div class="star-box">
+                                                        <p class="star-title">Оценка:</p>
+                                                        <p class="total-star">(10 оценок)</p>
+                                                    </div>
+                                                    <div class="star-box">
+                                                        <p class="star-title">Моя оценка:</p>
+                                                    </div>
+                                                    <div class="post-favorite-box">
+                                                        <img src="img/icon/disabled-favorite.svg" class="disabled-favorite" alt="favorite">
+                                                        <img src="img/header/zakladka.svg" class="active-favorite" alt="favorite">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-tempate-similar-wrap">
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="advertising-banner-wrap">

@@ -24,6 +24,9 @@ header {
         margin-right: 27%;
     }
     @media (max-width: 360px) {
+        margin-right: 24%;
+    }
+    @media (max-width: 320px) {
         margin-right: 22%;
     }
     .logo-text {
@@ -95,12 +98,9 @@ nav {
     z-index: 999;
     padding: 0 40px;
     @media (max-width: 1600px) {
-        padding: 0 35px;
+        padding: 0 25px;
     }
     @media (max-width: 1280px) {
-        padding: 0 30px;
-    }
-    @media (max-width: 1100px) {
         padding: 0 20px;
     }
     @media (max-width: 990px) {
@@ -129,6 +129,9 @@ nav {
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        @media (max-width: 1600px) {
+            padding: 10px 0;
+        }
         @media (max-width: 1024px) {
             flex-wrap: wrap;
         }
@@ -139,10 +142,13 @@ nav {
         }
     }
     li {
-        padding: 0 14px;
+        padding: 0 12.5px;
         border-right: 1px solid rgba(255,255,255,.5);
-        @media (max-width: 1600px) {
+        @media (max-width: 1800px) {
             padding: 0 10px;
+        }
+        @media (max-width: 1600px) {
+            padding: 0 5px;
         }
         @media (max-width: 1024px) {
             margin: 5px;
@@ -188,6 +194,10 @@ nav {
             letter-spacing: 1.5px;
             text-transform: uppercase;
             color: #fff;
+            @media (max-width: 1600px) {
+                font: 400 .75rem "SegoeUI-bold";
+                letter-spacing: 1px;
+            }
             @media (max-width: 990px) {
                 color: #0B1F5E;
                 font: 600 .87rem "SegoeUI-bold";

@@ -1,0 +1,353 @@
+.template {
+    height: 300px;
+    @media (max-width: 990px) {
+        height: 125px;
+    }
+    .main-screen-container {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .container {
+        @media (max-width: 990px) {
+            padding: 0;
+        }
+    }
+}
+
+.social {
+    background: url(../img/main-screen/social.png) no-repeat center center/cover;
+    @media (max-width: 990px) {
+        background: url(../img/main-screen/social.png) no-repeat center center/cover; 
+    }
+    .advanture-reklama-wrap {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: 990px) {
+            display: none;
+        }
+        .advanture-reklama-box {
+            width: 320px;
+            height: 160px;
+            @media (max-width: 1400px) {
+                width: 200px;
+                height: 120px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.post-template-panel{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 30px;
+    margin-bottom: 20px;
+}
+
+.post-template-main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 30px;
+    @media (max-width: 990px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.post-tempate-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.post-template-panel {
+    .post-template-title-wrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        .template-title-xl {
+            letter-spacing: .6px;
+            color: #CD181F;
+            text-transform: uppercase;
+            text-decoration: underline;
+            font: 1.875rem "SegoeUI-bold-2";
+            margin-right: 30px;
+        }
+        .template-title-sm {
+            letter-spacing: .6px;
+            color: #0B1F5E;
+            text-transform: uppercase;
+            text-decoration: underline;
+            font: 1.875rem "SegoeUI-bold-2";
+            margin-right: 30px;
+        }
+    }
+
+    .post-tempate-sort-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .top-link {
+            letter-spacing: .3px;
+            color: #0B1F5E;
+            margin-right: 20px;
+            font: .95rem "SegoeUI-bold-2";
+        }
+        .select-sort-box {
+            width: 135px;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                right: 2px;
+                top: 12px;
+                pointer-events: none;
+                position: absolute; 
+                border: 8px solid transparent; 
+                border-top: 8px solid #0B1F5E
+            }
+            select {
+                cursor: pointer;
+                width: 100%;
+                color: #0B1F5E;
+                font: .95rem "SegoeUI-bold-2";
+                box-sizing: border-box;
+                appearance: none;
+                text-decoration: underline;
+                border: none;
+                text-transform: uppercase;
+                padding: 5px 10px 5px 5px;
+            }
+        }
+    }
+}
+
+.post-template-post-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+
+.post-template-box {
+    border: 3px solid #0B1F5E;
+    border-radius: 5px;
+}
+
+.post-info-wrap {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-gap: 20px;
+    margin-bottom: 5px;
+    .post-info-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .type-post {
+        border-radius: 5px 0 5px 0;
+        background: #E72E36;
+        color: #fff;
+        position: relative;
+        top: -3px;
+        left: -3.5px;
+        font: 700 .87rem 'Roboto Condensed', sans-serif;
+        padding: 3px 15px;
+        margin-right: 5px;
+        text-transform: uppercase;
+    }
+    .box-lang {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-right: auto;
+        top: -2px;
+        margin-left: 3px;
+        .active-lang {
+            color: #CD181F;
+            text-decoration: none;
+        }
+        a {
+            font: .87rem "SegoeUI-bold-2";
+            margin-right: 5px;
+            text-decoration: underline;
+            color: #8C8C9E;
+            text-transform: uppercase;
+        }
+    }
+    .date-post {
+        font: .87rem "SegoeUI-bold-2";
+        letter-spacing: .6px;
+        color: #8C8C9E;
+        top: -2px;
+        position: relative;
+        margin-right: auto;
+    }
+    .top-post {
+        margin-left: auto;
+        border-radius: 0 5px 0 5px;
+        background: #22D600;
+        color: #fff;
+        position: relative;
+        top: -3px;
+        right: -3.5px;
+        text-transform: uppercase;
+        font: 700 .87rem 'Roboto Condensed', sans-serif;
+        padding: 3px 15px;
+    }
+}
+
+.post-content-wrap {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-gap: 20px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    .post-content-img {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        video {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 20px;
+            @media (max-width: 1600px) {
+                height: 140px;
+            }
+        }
+        .btn-chanel {
+            border-radius: 5px;
+            background: #E72E36;
+            padding: 5px 20px;
+            color: #fff;
+            font: 400 .95rem 'Raleway', sans-serif;
+        }
+    }
+    .post-name-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        top: -5px;
+        .chanel {
+            font: .87rem "SegoeUI-bold-2";
+            color: #8C8C9E;
+            text-transform: uppercase;
+        }
+        .post-user {
+            display: flex;
+            align-items: center;
+            img {
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;
+                border: 1px solid #0B1F5E;
+                margin-right: 5px;
+            }
+            .name {
+                font: 1rem "SegoeUI-bold-2";
+                text-decoration: underline;
+                color: #0B1F5E;
+            }
+        }
+    }
+    .post-wrap {
+        .post-title {
+            color: #0B1F5E;
+            margin-bottom: 15px;
+            font: 1.25rem "SegoeUI-bold-2";
+        }
+        .post-text {
+            font: .95rem/20px "SegoeUI-regular";
+            height: 120px;
+            padding-right: 5px;
+            color: #0B1F5E;
+            overflow-y: scroll;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        ::-webkit-scrollbar-track-piece  { 
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #0B1F5E;
+            width: 10px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.post-bottom-panel {
+    padding: 10px;
+    background: #0B1F5E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .coment-box {
+        cursor: pointer;
+        p {
+            font: .95rem "SegoeUI-regular";
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+    .post-favorite-box {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        img {
+            width: 28px;
+            height: 30px;
+        }
+        .disabled-favorite {
+            position: relative;
+            z-index: 2;
+        }
+        .active-favorite {
+            position: absolute;
+            z-index: -2;
+            left: 0;
+            opacity: 0;
+        }
+    }
+    .star-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .star-title {
+            font: .95rem "SegoeUI-bold-2";
+            color: #fff;
+            margin-right: 5px;
+        }
+        .total-star {
+            font: .95rem "SegoeUI-regular";
+            color: #fff;
+        }
+    }
+    .post-favorite-click {
+        .disabled-favorite {
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+        }
+        .active-favorite {
+            position: absolute;
+            z-index: 3;
+            left: 0;
+            opacity: 1;
+        }
+    }
+}
