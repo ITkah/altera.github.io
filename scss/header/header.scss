@@ -75,7 +75,8 @@ header {
         left: -10px;
         z-index: 999;
         @media (max-width: 990px) {
-            left: -15px;
+            left: -21px;
+            box-sizing: border-box;
         }
         li {
             padding: 3px 0;
@@ -106,7 +107,7 @@ nav {
     @media (max-width: 990px) {
         display: none;
     }
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
         display: block;
         position: fixed;
         right: 0;
@@ -124,14 +125,10 @@ nav {
         width: 85vw;
     }
     ul {
-        padding: 20px 0;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        @media (max-width: 1600px) {
-            padding: 10px 0;
-        }
         @media (max-width: 1024px) {
             flex-wrap: wrap;
         }
@@ -142,17 +139,6 @@ nav {
         }
     }
     li {
-        padding: 0 12.5px;
-        border-right: 1px solid rgba(255,255,255,.5);
-        @media (max-width: 1800px) {
-            padding: 0 10px;
-        }
-        @media (max-width: 1600px) {
-            padding: 0 5px;
-        }
-        @media (max-width: 1024px) {
-            margin: 5px;
-        }
         @media (max-width: 576px) {
             border: none;
             display: block;
@@ -190,17 +176,50 @@ nav {
             transform: rotate(180deg);
         }
         a {
-            font: 400 .95rem "SegoeUI-bold";
+            font:  .95rem "SegoeUI-bold";
             letter-spacing: 1.5px;
             text-transform: uppercase;
             color: #fff;
+            display: block;
+            padding: 20px 12.5px;
+            transition: .3s;
+            position: relative;
+            &::before {
+                content: '';
+                height: 12px;
+                width: 1px;
+                background: rgba(255,255,255,.5);
+                position: absolute;
+                right: 0;
+                top: 25px;
+                @media (max-width: 1600px) {
+                    top: 17px;
+                }
+            }
+            &:hover {
+                color: #0B1F5E;
+                background: #fff;
+                @media (max-width: 990px) {
+                    background: transparent;
+                }
+                &::before {
+                    display: none;
+                }
+            }
+            @media (max-width: 1800px) {
+                padding: 20px 10px;
+            }
             @media (max-width: 1600px) {
-                font: 400 .75rem "SegoeUI-bold";
+                padding: 15px 10px;
+            }
+            @media (max-width: 1600px) {
+                font:  .75rem "SegoeUI-bold";
                 letter-spacing: 1px;
             }
             @media (max-width: 990px) {
                 color: #0B1F5E;
-                font: 600 .87rem "SegoeUI-bold";
+                padding: 0;
+                font:  .87rem "SegoeUI-bold";
             }
         }
     }
@@ -208,6 +227,11 @@ nav {
         border: none;
         @media (max-width: 990px) {
             border-bottom: 1px solid #C5C5C5;
+        }
+        a {
+            &::before {
+                display: none;
+            }
         }
     }
     .sub-menu {

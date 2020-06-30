@@ -102,7 +102,34 @@ $(document).ready(function() {
 			}
 		}
 	});
-            
+  
+  $(".coment-text").on("keyup",function(){
+    var letter = ($(this).val().length);
+    $(this).siblings(".textarea-box").children(".coll-box").children(".coll-letter").text(letter);
+  });
+
+  $(".call-messages-invite").on("click", function(){
+    $(this).children(".messages-hide-answer").fadeToggle(150);
+  });
+
+  $(".filter-title").on("click", function(){
+    $(this).toggleClass("minus");
+    $(this).siblings(".filter-element").slideToggle(150);
+  });
+
+  $(".filter-template-btn").on("click", function(){
+    $(".filter-main-wrap").slideToggle(150);
+  });
+
+  $(".show-comment").on("click", function(){
+    $(".coment-box-container").show(150);
+    $(this).remove();
+  });
+
+  $(".coment-box").on("click", function(){
+    $(this).parent().siblings(".coment-container").slideToggle(150);
+  });
+
   $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
     disableOn: 700,
     type: 'iframe',
