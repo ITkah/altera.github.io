@@ -118,7 +118,13 @@ $(document).ready(function() {
   });
 
   $(".filter-template-btn").on("click", function(){
-    $(".filter-main-wrap").slideToggle(150);
+    $(".post-tempate-sort-wrap").toggleClass("close-div");
+    $(".filter-main-wrap").slideToggle(100);
+  });
+
+  $(".close-filter").on("click", function(){
+    $(".post-tempate-sort-wrap").removeClass("close-div");
+    $(".filter-main-wrap").slideUp(100);
   });
 
   $(".show-comment").on("click", function(){
