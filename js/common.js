@@ -109,6 +109,7 @@ $(document).ready(function() {
   });
 
   $(".call-messages-invite").on("click", function(){
+    $(".messages-hide-answer").not($(this)).fadeOut(150);
     $(this).children(".messages-hide-answer").fadeToggle(150);
   });
 
