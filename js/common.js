@@ -109,8 +109,13 @@ $(document).ready(function() {
   });
 
   $(".call-messages-invite").on("click", function(){
-    $(".messages-hide-answer").not($(this)).fadeOut(150);
-    $(this).children(".messages-hide-answer").fadeToggle(150);
+    e = $(this).closest('.coment-user-box').find('.messages-hide-answer');
+    if (!e.is(':visible')) {
+      $('.messages-hide-answer').fadeOut(150);
+      e.fadeIn(150);
+    } else {
+      e.fadeOut(150);
+    }
   });
 
   $(".filter-title").on("click", function(){

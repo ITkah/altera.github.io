@@ -34,10 +34,30 @@
         @media (max-width: 990px) {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
         }
         .advertising-banner-box {
+            @media (max-width: 1200px) {
+                height: 250px;
+            }
             @media (max-width: 576px) {
-                height: 100px;
+                height: 200px;
+                margin: 0;
+            }
+            @media (max-width: 420px) {
+                height: 140px;
+                margin: 0;
+            }
+            @media (max-width: 420px) {
+                height: 120px;
+                margin: 0;
+            }
+            img {
+                @media (max-width: 576px) {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
             }
         }
     }
