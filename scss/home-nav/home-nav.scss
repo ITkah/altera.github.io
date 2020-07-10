@@ -88,19 +88,16 @@
         grid-template-rows: repeat(3,200px);
     }
     @media (max-width: 990px) {
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(4,235px);
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3,1fr);
     }
     @media (max-width: 700px) {
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(4,200fr);
+        grid-template-rows: repeat(4,1fr);
     }
     @media (max-width: 576px) {
         grid-template-columns: repeat(2,1fr);
-        grid-template-rows: auto;
-    }
-    @media (max-width: 420px) {
-        grid-template-rows: auto;
+        grid-template-rows: repeat(6,1fr);
     }
     @media (max-width: 360px) {
         grid-template-columns: 1fr 1fr;
@@ -120,49 +117,30 @@
         cursor: pointer;
         border-radius: 10px;
         height: 100%;
+        width: 100%;
         box-sizing: border-box;
-        @media (max-width: 700px) {
-            height: 210px;
-        }
-        @media (max-width: 695px) {
-            height: 195px;
-        }
-        @media (max-width: 650px) {
-            height: 190px;
-        }
-        @media (max-width: 600px) {
-            height: 185px;
-        }
-        @media (max-width: 590px) {
-            height: 175px;
+        @media (max-width: 990px) {
+            padding: 36% 20px;
         }
         @media (max-width: 576px) {
-            height: 235px;
+            padding: 39% 20px;
         }
-        @media (max-width: 480px) {
-            height: 195px;
+        @media (max-width: 520px) {
+            padding: 34% 20px;
         }
         @media (max-width: 420px) {
-            height: 190px;
-        }
-        @media (max-width: 380px) {
-            height: 170px;
-        }
-        @media (max-width: 360px) {
-            height: 220px;
-        }
-        @media (max-width: 360px) {
-            height: 165px;
-        }
-        @media (max-width: 355px) {
-            height: 155px;
+            padding: 32% 15px;
         }
         @media (max-width: 340px) {
-            height: 300px;
+            height: 320px;
             margin: 10px 0;
+            padding: 20px;
+        }
+        @media (max-width: 330px) {
+            height: 310px;
         }
         @media (max-width: 320px) {
-            height: 280px;
+            height: 300px;
         }
         .home-nav-title {
             display: block;
@@ -177,8 +155,25 @@
             @media (max-width: 1400px) {
                 font: bold 1rem 'Raleway', sans-serif;
             }
+            @media (max-width: 990px) {
+                position: relative;
+                top: -90%;
+            }
+            @media (max-width: 768px) {
+                top: -80%;
+            }
             @media (max-width: 576px) {
                 font: bold .95rem 'Raleway', sans-serif;
+                top: -120%;
+            }
+            @media (max-width: 500px) {
+                top: -80%;
+            }
+            @media (max-width: 400px) {
+                top: -60%;
+            }
+            @media (max-width: 340px) {
+                top: 0;
             }
         }
         .home-nav-info {
@@ -188,6 +183,25 @@
             text-transform: uppercase;
             letter-spacing: .33px;
             text-align: center;
+            @media (max-width: 990px) {
+                position: relative;
+                top: -90%;
+            }
+            @media (max-width: 768px) {
+                top: -80%;
+            }
+            @media (max-width: 576px) {
+                top: -120%;
+            }
+            @media (max-width: 500px) {
+                top: -80%;
+            }
+            @media (max-width: 400px) {
+                top: -60%;
+            }
+            @media (max-width: 340px) {
+                top: 0;
+            }
         }
     }
     .blocked {
@@ -273,7 +287,7 @@
                     left: -28px;
                 }
                 @media (max-width: 576px) {
-                   top: -10px;
+                   top: -8px;
                 }
             }
         }

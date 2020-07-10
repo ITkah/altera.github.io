@@ -19,16 +19,6 @@ header {
 
 .logo-box {
     cursor: pointer;
-    @media (max-width: 576px) {
-        margin-left: auto;
-        margin-right: 27%;
-    }
-    @media (max-width: 360px) {
-        margin-right: 24%;
-    }
-    @media (max-width: 320px) {
-        margin-right: 22%;
-    }
     .logo-text {
         color: #fff;
         font: 300 1.5rem 'Raleway', sans-serif;
@@ -38,8 +28,10 @@ header {
         span {
             font: 300 2rem 'Arizonia', cursive;
             @media (max-width: 990px) {
-                display: block;
                 font: 300 1.3rem 'Arizonia', cursive;
+            }
+            @media (max-width: 700px) {
+                display: block;
             }
         }
     }
@@ -97,17 +89,33 @@ nav {
     background: #0B1F5E;
     position: relative;
     z-index: 999;
-    padding: 0 40px;
-    @media (max-width: 1600px) {
-        padding: 0 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    @media (max-width: 1800px) {
+        max-width: 1140px;
     }
-    @media (max-width: 1280px) {
-        padding: 0 20px;
+    @media (max-width: 1600px) {
+        max-width: 822px;
     }
     @media (max-width: 990px) {
-        display: none;
+        max-width: 100%;
     }
-    @media (max-width: 768px) {
+    &::before {
+        content: '';
+        height: 100%;
+        width: 300%;
+        position: absolute;
+        display: block;
+        left: -100%;
+        background: #0B1F5E;
+        @media (max-width: 990px) {
+            display: none;
+        }
+    }
+    @media (max-width: 990px) {
+        padding: 5px 20px;
+    }
+    @media (max-width: 700px) {
         display: block;
         position: fixed;
         right: 0;
@@ -128,9 +136,11 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
         @media (max-width: 1024px) {
             flex-wrap: wrap;
+        }
+        @media (max-width: 700px) {
+            overflow: hidden;
         }
         @media (max-width: 576px) {
             flex-direction: column;
@@ -139,22 +149,55 @@ nav {
         }
     }
     li {
-        @media (max-width: 576px) {
+        @media (max-width: 700px) {
             border: none;
             display: block;
             margin: 0;
             padding: 7.5px 10px;
             width: 100%;
+            position: relative;
             box-sizing: border-box;
             border-bottom: 1px solid #C5C5C5;
-            position: relative;
+        }
+        &:hover {
+            .sub-menu {
+                display: flex;
+                position: absolute;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                z-index: 99;
+                background: #4C63A6;
+                width: 100%;
+                left: 0;
+                @media (max-width: 990px) {
+                    margin-top: 10px;
+                    width: 108%;
+                    position: relative;
+                    left: -4%;
+                    display: none;
+                    background: transparent;
+                }
+                &::before {
+                    content: '';
+                    height: 100%;
+                    width: 300%;
+                    position: absolute;
+                    display: block;
+                    left: -100%;
+                    background: #4C63A6;
+                    @media (max-width: 990px) {
+                        display: none;
+                    }
+                }
+            }
         }
         .arrow-mob {
             position: absolute;
             right: 10px;
             top: 10px;
             transition: .2s;
-            @media(max-width: 576px) {
+            @media(max-width: 700px) {
                 height: 15px;
                 width: 15px;
                 display: flex;
@@ -162,7 +205,7 @@ nav {
                 justify-content: center;
             }
             &::before {
-                @media (max-width: 576px) {
+                @media (max-width: 700px) {
                     content: '';
                     position: relative;
                     top: 2px;
@@ -195,11 +238,14 @@ nav {
                 @media (max-width: 1600px) {
                     top: 17px;
                 }
+                @media (max-width: 990px) {
+                    top: 8px;
+                }
             }
             &:hover {
                 color: #0B1F5E;
                 background: #fff;
-                @media (max-width: 990px) {
+                @media (max-width: 700px) {
                     background: transparent;
                 }
                 &::before {
@@ -210,13 +256,14 @@ nav {
                 padding: 20px 10px;
             }
             @media (max-width: 1600px) {
-                padding: 15px 10px;
-            }
-            @media (max-width: 1600px) {
                 font:  .75rem "SegoeUI-bold";
                 letter-spacing: 1px;
+                padding: 15px 5px;
             }
             @media (max-width: 990px) {
+                padding: 5px 15px;
+            }
+            @media (max-width: 700px) {
                 color: #0B1F5E;
                 padding: 0;
                 font:  .87rem "SegoeUI-bold";
@@ -225,7 +272,7 @@ nav {
     }
     li:last-child{
         border: none;
-        @media (max-width: 990px) {
+        @media (max-width: 700px) {
             border-bottom: 1px solid #C5C5C5;
         }
         a {
@@ -236,23 +283,40 @@ nav {
     }
     .sub-menu {
         display: none;
-        margin-top: 10px;
-        width: 108%;
-        position: relative;
-        left: -4%;
+        @media (max-width: 990px) {
+            margin-top: 10px;
+            width: 108%;
+            position: relative;
+            left: -4%;
+        }
         li {
-            border-bottom: 1px solid #C5C5C5;
+            @media (max-width: 700px) {
+                border-top: 1px solid #C5C5C5;
+                border-bottom: none;
+            }
             a {
-                font: 600 .87rem "SegoeUI-light";
-                padding-left: 20px;
+                @media (max-width: 700px) {
+                    font: 600 .87rem "SegoeUI-light";
+                    padding-left: 20px;
+                }
+                &::before {
+                    content: '';
+                    top:20px;
+                    @media (max-width: 1600px) {
+                        top: 18px;
+                    }
+                    @media (max-width: 990px) {
+                        top: 8px;
+                    }
+                }
             }
         }
-        li:first-child {
-            border-top: 1px solid #C5C5C5;
-        }
         li:last-child {
-            border: none;
-            padding-bottom: 0;
+            @media (max-width: 700px) {
+                border: none;
+                padding-bottom: 0;
+                border-top: 1px solid #C5C5C5;
+            }
         }
     }
 }
@@ -349,10 +413,10 @@ nav {
         .hide-search {
             position: absolute;
             z-index: 99;
-            bottom: -35px;
+            bottom: -45px;
             left: 10px;
             right: 10px;
-            padding: 6px 10px;
+            padding: 10px;
             border-radius: 10px;
             width: 94%;
             border: 1px solid #000;
@@ -367,13 +431,13 @@ nav {
     }
     .logo-box {
         @media (max-width: 700px) {
-            margin-left: 5%;
+            margin-left: 15%;
             margin-right: auto;
         }
-        @media (max-width: 375px) {
-            margin-left: 3%;
+        @media (max-width: 576px) {
+            margin-left: 10%;
         }
-        @media (max-width: 370px) {
+        @media (max-width: 420px) {
             margin-left: 5px;
         }
     }
@@ -580,7 +644,7 @@ nav {
 
 .nav-hide-panel {
     display: none;
-    @media (max-width: 576px) {
+    @media (max-width: 700px) {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -627,10 +691,21 @@ nav {
     }
 }
 
+.header-simple {
+    .nav-hide-panel {
+        @media (max-width: 990px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #0b1f5e;
+            padding: 8px 10px;
+        }
+    }
+}
 
 .nav-hide-panel-2 {
     display: none;
-    @media (max-width: 576px) { 
+    @media (max-width: 700px) { 
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -695,4 +770,24 @@ nav {
 .active-menu {
     transition: .3s;
     transform: translateX(0);
+}
+
+
+.simple-box-header {
+    display: flex;
+    align-items: center;
+    .lang-box {
+        @media (max-width: 700px) {
+            display: none;
+        }
+    }
+    .call-menu {
+        display: none;
+        margin-left: 10px;
+        height: 25px;
+        @media (max-width: 700px) {
+            display: block;
+        }
+    }
+   
 }

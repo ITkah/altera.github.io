@@ -60,10 +60,13 @@ footer {
             font: 300 1rem 'Raleway', sans-serif;
         }
         @media (max-width: 990px) {
-            font: 300 1rem 'Raleway', sans-serif;
+            font: 300 1rem/23px 'Raleway', sans-serif;
         }
         @media (max-width: 700px) {
-            font: 300 .95rem 'Raleway', sans-serif;
+            font: 300 1.2rem/30px 'Raleway', sans-serif;
+        }
+        @media (max-width: 576px) {
+            font: 300 .95rem/22px 'Raleway', sans-serif;
         }
         strong {
             font: 600 1.25rem 'Raleway', sans-serif;
@@ -137,7 +140,7 @@ footer {
     @media (max-width: 1280px) {
         justify-content: space-between;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 990px) {
         flex-direction: column;
     }
     @media (max-width: 700px) {
@@ -156,7 +159,7 @@ footer {
         @media (max-width: 1280px) {
             margin-right: 10px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 990px) {
             margin: 0 0 20px 0;
         }
         @media (max-width: 700px) {
@@ -171,6 +174,14 @@ footer {
                 text-transform: uppercase;
                 font: 300 .87rem 'Raleway', sans-serif;
                 color: #fff;
+                @media (max-width: 700px){
+                    font: 300 1rem 'Raleway', sans-serif;
+                    margin-right: 30px;
+                }
+                @media (max-width: 576px) {
+                    font: 300 .87rem 'Raleway', sans-serif;
+                    margin: 0;
+                }
                 &:hover {
                     text-decoration: underline;
                 }
@@ -181,7 +192,7 @@ footer {
         }
     }
     .btn-wrap {
-        @media (max-width:700px) {
+        @media (max-width:990px) {
             display: flex;
             flex-direction: column;
             align-items: center;
